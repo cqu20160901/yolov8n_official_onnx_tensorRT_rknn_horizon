@@ -33,5 +33,8 @@ yolov8n_horizon：地平线模型、测试（量化）图像、测试结果、�
 
 # 特别说明
 说明：推理测试预处理没有考虑等比率缩放，激活函数 SiLU 用 Relu 进行了替换。由于使用的是 VOC 数据进行训练的（类别是20类），且迭代的次数不多，效果并不是很好，仅供测试流程用。
+导出onnx的方式参考[yolov8 官方模型进行瑞芯微RKNN和地平线Horizon芯片仿真测试部署](https://blog.csdn.net/zhangqian_1/article/details/130754564)
 
-本实例仓库是基于官方提供的导出onnx模型进行板端芯片部署测试，官方提供到导出onnx模型对应板端芯片部署效率不高。若追求更优的板端芯片部署，建议参考转为部署而导出的onnx方式，[yolov8 瑞芯微RKNN和地平线Horizon芯片仿真测试部署](https://blog.csdn.net/zhangqian_1/article/details/128918268) 和 [yolov8板端芯片高效部署方式实例代码](https://github.com/cqu20160901/yolov8n_onnx_tensorRT_rknn_horizon)
+本实例仓库是基于官方提供的导出onnx模型进行板端芯片部署测试，官方提供到导出onnx模型对应板端芯片部署效率不高。
+
+若追求更优的板端芯片部署，建议参考转为部署而导出的onnx方式，[yolov8 瑞芯微RKNN和地平线Horizon芯片仿真测试部署](https://blog.csdn.net/zhangqian_1/article/details/128918268) 和 [yolov8板端芯片高效部署方式实例代码](https://github.com/cqu20160901/yolov8n_onnx_tensorRT_rknn_horizon)
