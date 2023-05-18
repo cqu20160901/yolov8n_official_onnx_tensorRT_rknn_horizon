@@ -3,7 +3,7 @@ yolov8n 部署版，基于官方的导出onnx脚本导出onnx模型，在不同�
 
 # 文件夹结构说明
 
-yolov8_onnx_offical：使用官方提供的导出onnx方式导出的onnx模型、测试图像、测试结果、测试demo脚本。
+yolov8_onnx_offical：使用官方提供的导出onnx方式导出的onnx模型、测试图像、测试结果、测试demo脚本。直接用官方提供的导出onnx方式，转换成板端模型报错，解码部分anchors和strides的操作不支持，因需要将移到后处理中进行。
 
 ### 修改部分
 
