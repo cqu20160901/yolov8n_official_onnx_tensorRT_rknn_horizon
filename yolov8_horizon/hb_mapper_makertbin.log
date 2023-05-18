@@ -1,0 +1,314 @@
+2023-05-18 17:44:58,116 file: hb_mapper.py func: hb_mapper line No: 111 Start hb_mapper....
+2023-05-18 17:44:58,117 file: hb_mapper.py func: hb_mapper line No: 112 log will be stored in /convert_model/horizon_model_convert_sample/04_detection/03_yolov8_concat/mapper/hb_mapper_makertbin.log
+2023-05-18 17:44:58,117 file: hb_mapper.py func: hb_mapper line No: 113 hbdk version 3.27.4
+2023-05-18 17:44:58,117 file: hb_mapper.py func: hb_mapper line No: 114 horizon_nn version 0.13.3
+2023-05-18 17:44:58,117 file: hb_mapper.py func: hb_mapper line No: 115 hb_mapper version 1.6.8a
+2023-05-18 17:44:58,117 file: hb_mapper_makertbin.py func: hb_mapper_makertbin line No: 590 Start Model Convert....
+2023-05-18 17:44:58,130 file: mapper_conf_parser.py func: mapper_conf_parser line No: 811 Using abs path /convert_model/horizon_model_convert_sample/04_detection/03_yolov8_concat/mapper/model/yolov8n_relu_20class_zq.onnx
+2023-05-18 17:44:58,132 file: mapper_conf_parser.py func: mapper_conf_parser line No: 137 validating model_parameters...
+2023-05-18 17:44:58,142 file: mapper_conf_parser.py func: mapper_conf_parser line No: 811 Using abs path /convert_model/horizon_model_convert_sample/04_detection/03_yolov8_concat/mapper/model_output
+2023-05-18 17:44:58,142 file: mapper_conf_parser.py func: mapper_conf_parser line No: 149 validating model_parameters finished
+2023-05-18 17:44:58,142 file: mapper_conf_parser.py func: mapper_conf_parser line No: 153 validating input_parameters...
+2023-05-18 17:44:58,143 file: helper.py func: helper line No: 124 Model input names: ['images']
+2023-05-18 17:44:58,143 file: mapper_conf_parser.py func: mapper_conf_parser line No: 273 input num is set to 1 according to input_names
+2023-05-18 17:44:58,143 file: mapper_conf_parser.py func: mapper_conf_parser line No: 279 model name missing, using model name from model file: ['images']
+2023-05-18 17:44:58,143 file: mapper_conf_parser.py func: mapper_conf_parser line No: 325 model input shape missing, using shape from model file: [[1, 3, 640, 640]]
+2023-05-18 17:44:58,143 file: mapper_conf_parser.py func: mapper_conf_parser line No: 164 validating input_parameters finished
+2023-05-18 17:44:58,143 file: mapper_conf_parser.py func: mapper_conf_parser line No: 168 validating calibration_parameters...
+2023-05-18 17:44:58,145 file: mapper_conf_parser.py func: mapper_conf_parser line No: 811 Using abs path /convert_model/horizon_model_convert_sample/04_detection/03_yolov8_concat/mapper/cal_data
+2023-05-18 17:44:58,145 file: mapper_conf_parser.py func: mapper_conf_parser line No: 182 validating calibration_parameters finished
+2023-05-18 17:44:58,145 file: mapper_conf_parser.py func: mapper_conf_parser line No: 186 validating custom_op...
+2023-05-18 17:44:58,145 file: mapper_conf_parser.py func: mapper_conf_parser line No: 724 custom_op does not exist, skipped
+2023-05-18 17:44:58,145 file: mapper_conf_parser.py func: mapper_conf_parser line No: 192 validating custom_op finished
+2023-05-18 17:44:58,145 file: mapper_conf_parser.py func: mapper_conf_parser line No: 195 validating compiler_parameters...
+2023-05-18 17:44:58,145 file: mapper_conf_parser.py func: mapper_conf_parser line No: 201 validating compiler_parameters finished
+2023-05-18 17:44:58,146 file: hb_mapper_makertbin.py func: hb_mapper_makertbin line No: 56 Dump config:
+2023-05-18 17:44:58,146 file: hb_mapper_makertbin.py func: hb_mapper_makertbin line No: 57 calibration_parameters:
+  cal_data_dir: ./cal_data
+  calibration_type: default
+  preprocess_on: true
+compiler_parameters:
+  compile_mode: latency
+  debug: false
+  optimize_level: O3
+input_parameters:
+  input_layout_rt: NCHW
+  input_layout_train: NCHW
+  input_name: ''
+  input_shape: ''
+  input_type_rt: rgb
+  input_type_train: rgb
+  mean_value: ''
+  norm_type: data_scale
+  scale_value: '0.003921568627451'
+model_parameters:
+  layer_out_dump: false
+  log_level: debug
+  march: bernoulli2
+  onnx_model: /convert_model/horizon_model_convert_sample/04_detection/03_yolov8_concat/mapper/model/yolov8n_relu_20class_zq.onnx
+  output_model_file_prefix: yolov8
+  working_dir: model_output
+
+2023-05-18 17:44:58,149 file: hb_mapper_makertbin.py func: hb_mapper_makertbin line No: 63 input 'images' : original model shape: [1, 3, 640, 640]
+2023-05-18 17:44:58,150 file: loader.py func: loader line No: 44 *******************************************
+2023-05-18 17:44:58,150 file: loader.py func: loader line No: 45 First calibration picture name: test.jpg
+2023-05-18 17:44:58,150 file: loader.py func: loader line No: 47 First calibration picture md5:
+2023-05-18 17:44:58,161 file: loader.py func: loader line No: 51 *******************************************
+2023-05-18 17:44:58,285 file: tool_utils.py func: tool_utils line No: 320 calibration data shape: (1, 3, 640, 640)
+2023-05-18 17:44:58,287 file: hb_mapper_makertbin.py func: hb_mapper_makertbin line No: 579 call build params:
+ {'march': 'bernoulli2', 'debug_mode': False, 'save_model': True, 'name_prefix': 'yolov8', 'input_dict': {'images': {'input_shape': [1, 3, 640, 640], 'expected_input_type': 'RGB_128', 'original_input_type': 'RGB', 'original_input_layout': 'NCHW', 'scales': array([0.00392157], dtype=float32)}}, 'cali_dict': {'calibration_type': 'default', 'calibration_data': {'images': array([[[[   8.464066 ,    8.464066 ,    8.464066 , ...,    4.       ,
+             4.       ,    4.       ],
+         [   8.607819 ,    8.607819 ,    8.607819 , ...,    4.       ,
+             4.       ,    4.       ],
+         [   9.679703 ,    9.679703 ,    9.679703 , ...,    4.       ,
+             4.       ,    4.       ],
+         ...,
+         [-126.599304 , -125.36224  , -125.94513  , ..., -128.       ,
+          -128.       , -128.       ],
+         [-126.35645  , -126.62675  , -126.38896  , ..., -128.       ,
+          -128.       , -128.       ],
+         [-126.32388  , -126.79632  , -126.44848  , ..., -128.       ,
+          -128.       , -128.       ]],
+
+        [[  13.464066 ,   13.464066 ,   13.464066 , ...,    7.       ,
+             7.       ,    7.       ],
+         [  13.607819 ,   13.607819 ,   13.607819 , ...,    7.       ,
+             7.       ,    7.       ],
+         [  14.6796875,   14.679703 ,   14.6796875, ...,    7.       ,
+             7.       ,    7.       ],
+         ...,
+         [-126.599304 , -125.36224  , -125.94513  , ..., -128.       ,
+          -128.       , -128.       ],
+         [-126.35645  , -126.62675  , -126.38896  , ..., -128.       ,
+          -128.       , -128.       ],
+         [-126.32388  , -126.79632  , -126.44848  , ..., -128.       ,
+          -128.       , -128.       ]],
+
+        [[  17.464066 ,   17.464066 ,   17.464066 , ...,   12.       ,
+            12.       ,   12.       ],
+         [  17.607819 ,   17.607819 ,   17.607819 , ...,   12.       ,
+            12.       ,   12.       ],
+         [  18.679703 ,   18.679703 ,   18.679703 , ...,   12.       ,
+            12.       ,   12.       ],
+         ...,
+         [-126.599304 , -125.36224  , -125.94513  , ..., -128.       ,
+          -128.       , -128.       ],
+         [-126.35645  , -126.62675  , -126.38896  , ..., -128.       ,
+          -128.       , -128.       ],
+         [-126.32388  , -126.79632  , -126.44848  , ..., -128.       ,
+          -128.       , -128.       ]]]], dtype=float32)}}, 'hbdk_dict': {'hbdk_pass_through_params': '--fast --O3', 'input-source': {'images': 'ddr', '_default_value': 'ddr'}}, 'node_dict': {}}
+2023-05-18 17:44:58,297 file: build.py func: build line No: 36 [Thu May 18 17:44:58 2023] Start to Horizon NN Model Convert.
+2023-05-18 17:44:58,298 file: dict_parser.py func: dict_parser line No: 32 Parsing the input parameter:{'images': {'input_shape': [1, 3, 640, 640], 'expected_input_type': 'RGB_128', 'original_input_type': 'RGB', 'original_input_layout': 'NCHW', 'scales': array([0.00392157], dtype=float32)}}
+2023-05-18 17:44:58,298 file: build.py func: build line No: 237 Parsing the calibration parameter
+2023-05-18 17:44:58,298 file: dict_parser.py func: dict_parser line No: 518 Parsing the hbdk parameter:{'hbdk_pass_through_params': '--fast --O3', 'input-source': {'images': 'ddr', '_default_value': 'ddr'}}
+2023-05-18 17:44:58,298 file: build.py func: build line No: 143 HorizonNN version: 0.13.3
+2023-05-18 17:44:58,299 file: build.py func: build line No: 147 HBDK version: 3.27.4
+2023-05-18 17:44:58,299 file: build.py func: build line No: 36 [Thu May 18 17:44:58 2023] Start to parse the onnx model.
+2023-05-18 17:44:58,335 file: onnx_parser.py func: onnx_parser line No: 146 ONNX model info:
+ONNX IR version:  6
+Opset version:    11
+Input name:       images, [1, 3, 640, 640]
+2023-05-18 17:44:58,381 file: build.py func: build line No: 39 [Thu May 18 17:44:58 2023] End to parse the onnx model.
+2023-05-18 17:44:58,382 file: build.py func: build line No: 266 Model input names: ['images']
+2023-05-18 17:44:58,382 file: dict_parser.py func: dict_parser line No: 288 Create a preprocessing operator for input_name images with means=None, std=[254.99998492], original_input_layout=NCHW, color convert from 'RGB' to 'RGB'.
+2023-05-18 17:44:58,419 file: build.py func: build line No: 537 Saving the original float model: yolov8_original_float_model.onnx.
+2023-05-18 17:44:58,419 file: build.py func: build line No: 36 [Thu May 18 17:44:58 2023] Start to optimize the model.
+2023-05-18 17:44:58,594 file: build.py func: build line No: 39 [Thu May 18 17:44:58 2023] End to optimize the model.
+2023-05-18 17:44:58,603 file: build.py func: build line No: 548 Saving the optimized model: yolov8_optimized_float_model.onnx.
+2023-05-18 17:44:58,603 file: build.py func: build line No: 36 [Thu May 18 17:44:58 2023] Start to calibrate the model.
+2023-05-18 17:44:58,672 file: calibration_data_set.py func: calibration_data_set line No: 67 There are 1 samples in the calibration data set.
+2023-05-18 17:44:58,674 file: default_calibrater.py func: default_calibrater line No: 145 Run calibration model with default calibration method.
+2023-05-18 17:45:06,470 file: default_calibrater.py func: default_calibrater line No: 169 Select max-percentile:percentile=0.99995 method.
+2023-05-18 17:45:06,485 file: build.py func: build line No: 39 [Thu May 18 17:45:06 2023] End to calibrate the model.
+2023-05-18 17:45:06,485 file: build.py func: build line No: 36 [Thu May 18 17:45:06 2023] Start to quantize the model.
+2023-05-18 17:45:09,540 file: build.py func: build line No: 39 [Thu May 18 17:45:09 2023] End to quantize the model.
+2023-05-18 17:45:09,629 file: build.py func: build line No: 562 Saving the quantized model: yolov8_quantized_model.onnx.
+2023-05-18 17:45:09,629 file: build.py func: build line No: 36 [Thu May 18 17:45:09 2023] Start to compile the model with march bernoulli2.
+2023-05-18 17:45:09,758 file: hybrid_build.py func: hybrid_build line No: 123 Compile submodel: torch-jit-export_subgraph_0
+2023-05-18 17:45:09,934 file: hbdk_cc.py func: hbdk_cc line No: 119 hbdk-cc parameters:['--fast', '--O3', '--input-layout', 'NHWC', '--output-layout', 'NCHW', '--input-source', 'ddr']
+2023-05-18 17:45:22,480 file: tool_utils.py func: tool_utils line No: 293 consumed time 12.5184
+2023-05-18 17:45:22,685 file: hybrid_build.py func: hybrid_build line No: 123 Compile submodel: torch-jit-export_subgraph_1
+2023-05-18 17:45:22,698 file: hbdk_cc.py func: hbdk_cc line No: 119 hbdk-cc parameters:['--fast', '--O3', '--input-layout', 'NHWC', '--output-layout', 'NCHW', '--input-source', 'ddr']
+2023-05-18 17:45:23,021 file: tool_utils.py func: tool_utils line No: 293 consumed time 0.294151
+2023-05-18 17:45:23,171 file: build.py func: build line No: 39 [Thu May 18 17:45:23 2023] End to compile the model with march bernoulli2.
+2023-05-18 17:45:23,174 file: node_info.py func: node_info line No: 54 The converted model node information:
+============================================================================================================================================
+Node                                               ON   Subgraph  Type                       Cosine Similarity  Threshold                   
+--------------------------------------------------------------------------------------------------------------------------------------------
+HZ_PREPROCESS_FOR_images                           BPU  id(0)     HzSQuantizedPreprocess     1.000001           127.000000                  
+Conv_0                                             BPU  id(0)     HzSQuantizedConv           0.999800           0.999544                    
+Conv_2                                             BPU  id(0)     HzSQuantizedConv           0.998659           12.403361                   
+Conv_4                                             BPU  id(0)     HzSQuantizedConv           0.997995           21.965719                   
+Split_6                                            BPU  id(0)     Split                      0.997500           16.303604                   
+Conv_7                                             BPU  id(0)     HzSQuantizedConv           0.995203           16.303604                   
+Conv_9                                             BPU  id(0)     HzSQuantizedConv           0.981883           7.836031                    
+UNIT_CONV_FOR_Add_11                               BPU  id(0)     HzSQuantizedConv           0.992326           16.303604                   
+UNIT_CONV_FOR_134_0.123820528388023_TO_FUSE_SCALE  BPU  id(0)     HzSQuantizedConv                                                          
+UNIT_CONV_FOR_135_0.123820528388023_TO_FUSE_SCALE  BPU  id(0)     HzSQuantizedConv                                                          
+Concat_12                                          BPU  id(0)     Concat                     0.994868           16.303604                   
+Conv_13                                            BPU  id(0)     HzSQuantizedConv           0.994734           15.725207                   
+Conv_15                                            BPU  id(0)     HzSQuantizedConv           0.992496           10.807751                   
+Conv_17                                            BPU  id(0)     HzSQuantizedConv           0.994028           8.635073                    
+Split_19                                           BPU  id(0)     Split                      0.991550           8.545234                    
+Conv_20                                            BPU  id(0)     HzSQuantizedConv           0.990057           8.545234                    
+Conv_22                                            BPU  id(0)     HzSQuantizedConv           0.992039           6.934910                    
+UNIT_CONV_FOR_Add_24                               BPU  id(0)     HzSQuantizedConv           0.995940           8.545234                    
+Conv_25                                            BPU  id(0)     HzSQuantizedConv           0.985827           8.375968                    
+Conv_27                                            BPU  id(0)     HzSQuantizedConv           0.987061           6.965480                    
+UNIT_CONV_FOR_Add_29                               BPU  id(0)     HzSQuantizedConv           0.994824           8.375968                    
+UNIT_CONV_FOR_148_0.092921793460846_TO_FUSE_SCALE  BPU  id(0)     HzSQuantizedConv                                                          
+UNIT_CONV_FOR_149_0.092921793460846_TO_FUSE_SCALE  BPU  id(0)     HzSQuantizedConv                                                          
+UNIT_CONV_FOR_154_0.092921793460846_TO_FUSE_SCALE  BPU  id(0)     HzSQuantizedConv                                                          
+Concat_30                                          BPU  id(0)     Concat                     0.994849           8.545234                    
+Conv_31                                            BPU  id(0)     HzSQuantizedConv           0.989631           11.801067                   
+Conv_33                                            BPU  id(0)     HzSQuantizedConv           0.993039           6.566620                    
+Conv_35                                            BPU  id(0)     HzSQuantizedConv           0.993962           5.324535                    
+Split_37                                           BPU  id(0)     Split                      0.993075           5.991178                    
+Conv_38                                            BPU  id(0)     HzSQuantizedConv           0.993580           5.991178                    
+Conv_40                                            BPU  id(0)     HzSQuantizedConv           0.995728           6.053510                    
+UNIT_CONV_FOR_Add_42                               BPU  id(0)     HzSQuantizedConv           0.996102           5.991178                    
+Conv_43                                            BPU  id(0)     HzSQuantizedConv           0.992536           7.405083                    
+Conv_45                                            BPU  id(0)     HzSQuantizedConv           0.994673           4.570321                    
+UNIT_CONV_FOR_Add_47                               BPU  id(0)     HzSQuantizedConv           0.996503           7.405083                    
+UNIT_CONV_FOR_167_0.073348112404346_TO_FUSE_SCALE  BPU  id(0)     HzSQuantizedConv                                                          
+UNIT_CONV_FOR_168_0.073348112404346_TO_FUSE_SCALE  BPU  id(0)     HzSQuantizedConv                                                          
+UNIT_CONV_FOR_173_0.073348112404346_TO_FUSE_SCALE  BPU  id(0)     HzSQuantizedConv                                                          
+Concat_48                                          BPU  id(0)     Concat                     0.995783           5.991178                    
+Conv_49                                            BPU  id(0)     HzSQuantizedConv           0.993390           9.315210                    
+Conv_51                                            BPU  id(0)     HzSQuantizedConv           0.996492           5.149191                    
+Conv_53                                            BPU  id(0)     HzSQuantizedConv           0.997197           4.423449                    
+Split_55                                           BPU  id(0)     Split                      0.997409           3.469278                    
+Conv_56                                            BPU  id(0)     HzSQuantizedConv           0.997052           3.469278                    
+Conv_58                                            BPU  id(0)     HzSQuantizedConv           0.998186           3.615985                    
+UNIT_CONV_FOR_Add_60                               BPU  id(0)     HzSQuantizedConv           0.998233           3.469278                    
+UNIT_CONV_FOR_186_0.044387567788363_TO_FUSE_SCALE  BPU  id(0)     HzSQuantizedConv                                                          
+UNIT_CONV_FOR_187_0.044387567788363_TO_FUSE_SCALE  BPU  id(0)     HzSQuantizedConv                                                          
+Concat_61                                          BPU  id(0)     Concat                     0.997874           3.469278                    
+Conv_62                                            BPU  id(0)     HzSQuantizedConv           0.997992           5.637221                    
+Conv_64                                            BPU  id(0)     HzSQuantizedConv           0.998421           3.657737                    
+MaxPool_66                                         BPU  id(0)     HzQuantizedMaxPool         0.999231           5.429083                    
+MaxPool_67                                         BPU  id(0)     HzQuantizedMaxPool         0.999378           5.429083                    
+MaxPool_68                                         BPU  id(0)     HzQuantizedMaxPool         0.999424           5.429083                    
+Concat_69                                          BPU  id(0)     Concat                     0.999319           5.429083                    
+Conv_70                                            BPU  id(0)     HzSQuantizedConv           0.997815           5.429083                    
+Resize_73                                          BPU  id(0)     HzQuantizedResizeUpsample  0.997801           5.697125                    
+UNIT_CONV_FOR_181_0.044859256595373_TO_FUSE_SCALE  BPU  id(0)     HzSQuantizedConv                                                          
+Concat_74                                          BPU  id(0)     Concat                     0.996297           5.697125                    
+Conv_75                                            BPU  id(0)     HzSQuantizedConv           0.996635           5.697125                    
+Split_77                                           BPU  id(0)     Split                      0.996774           5.496699                    
+Conv_78                                            BPU  id(0)     HzSQuantizedConv           0.995529           5.496699                    
+Conv_80                                            BPU  id(0)     HzSQuantizedConv           0.995805           4.864940                    
+UNIT_CONV_FOR_212_0.045146875083447_TO_FUSE_SCALE  BPU  id(0)     HzSQuantizedConv                                                          
+UNIT_CONV_FOR_213_0.045146875083447_TO_FUSE_SCALE  BPU  id(0)     HzSQuantizedConv                                                          
+Concat_82                                          BPU  id(0)     Concat                     0.996222           5.496699                    
+Conv_83                                            BPU  id(0)     HzSQuantizedConv           0.995888           5.733653                    
+Resize_86                                          BPU  id(0)     HzQuantizedResizeUpsample  0.995955           5.915908                    
+UNIT_CONV_FOR_162_0.046581950038671_TO_FUSE_SCALE  BPU  id(0)     HzSQuantizedConv                                                          
+Concat_87                                          BPU  id(0)     Concat                     0.992892           5.915908                    
+Conv_88                                            BPU  id(0)     HzSQuantizedConv           0.994703           5.915908                    
+Split_90                                           BPU  id(0)     Split                      0.994109           5.115043                    
+Conv_91                                            BPU  id(0)     HzSQuantizedConv           0.992127           5.115043                    
+Conv_93                                            BPU  id(0)     HzSQuantizedConv           0.991114           5.411252                    
+UNIT_CONV_FOR_229_0.049711327999830_TO_FUSE_SCALE  BPU  id(0)     HzSQuantizedConv                                                          
+UNIT_CONV_FOR_230_0.049711327999830_TO_FUSE_SCALE  BPU  id(0)     HzSQuantizedConv                                                          
+Concat_95                                          BPU  id(0)     Concat                     0.993220           5.115043                    
+Conv_96                                            BPU  id(0)     HzSQuantizedConv           0.992374           6.313339                    
+Conv_98                                            BPU  id(0)     HzSQuantizedConv           0.992036           5.924992                    
+UNIT_CONV_FOR_220_0.046050522476435_TO_FUSE_SCALE  BPU  id(0)     HzSQuantizedConv                                                          
+Concat_100                                         BPU  id(0)     Concat                     0.994633           5.848416                    
+Conv_101                                           BPU  id(0)     HzSQuantizedConv           0.994619           5.848416                    
+Split_103                                          BPU  id(0)     Split                      0.994377           5.496784                    
+Conv_104                                           BPU  id(0)     HzSQuantizedConv           0.993200           5.496784                    
+Conv_106                                           BPU  id(0)     HzSQuantizedConv           0.993866           4.331662                    
+UNIT_CONV_FOR_243_0.044576432555914_TO_FUSE_SCALE  BPU  id(0)     HzSQuantizedConv                                                          
+UNIT_CONV_FOR_244_0.044576432555914_TO_FUSE_SCALE  BPU  id(0)     HzSQuantizedConv                                                          
+Concat_108                                         BPU  id(0)     Concat                     0.994179           5.496784                    
+Conv_109                                           BPU  id(0)     HzSQuantizedConv           0.993495           5.661207                    
+Conv_111                                           BPU  id(0)     HzSQuantizedConv           0.995427           6.087338                    
+UNIT_CONV_FOR_203_0.042752940207720_TO_FUSE_SCALE  BPU  id(0)     HzSQuantizedConv                                                          
+Concat_113                                         BPU  id(0)     Concat                     0.997034           5.429624                    
+Conv_114                                           BPU  id(0)     HzSQuantizedConv           0.997141           5.429624                    
+Split_116                                          BPU  id(0)     Split                      0.997093           3.988757                    
+Conv_117                                           BPU  id(0)     HzSQuantizedConv           0.997222           3.988757                    
+Conv_119                                           BPU  id(0)     HzSQuantizedConv           0.997244           4.075403                    
+UNIT_CONV_FOR_257_0.047355044633150_TO_FUSE_SCALE  BPU  id(0)     HzSQuantizedConv                                                          
+UNIT_CONV_FOR_258_0.047355044633150_TO_FUSE_SCALE  BPU  id(0)     HzSQuantizedConv                                                          
+Concat_121                                         BPU  id(0)     Concat                     0.997123           3.988757                    
+Conv_122                                           BPU  id(0)     HzSQuantizedConv           0.996709           6.014091                    
+Conv_127                                           BPU  id(0)     HzSQuantizedConv           0.992701           5.924992                    
+Conv_129                                           BPU  id(0)     HzSQuantizedConv           0.995396           4.867514                    
+Conv_131                                           BPU  id(0)     HzSQuantizedConv           0.997161           9.562574                    
+Conv_132                                           BPU  id(0)     HzSQuantizedConv           0.992243           5.924992                    
+Conv_134                                           BPU  id(0)     HzSQuantizedConv           0.995574           4.036366                    
+Conv_136                                           BPU  id(0)     HzSQuantizedConv           0.999994           7.378135                    
+Concat_137                                         CPU  --        Concat                     0.999502           --                          
+Conv_138                                           BPU  id(0)     HzSQuantizedConv           0.995434           6.087338                    
+Conv_140                                           BPU  id(0)     HzSQuantizedConv           0.996764           5.268045                    
+Conv_142                                           BPU  id(0)     HzSQuantizedConv           0.997189           10.010799                   
+Conv_143                                           BPU  id(0)     HzSQuantizedConv           0.994286           6.087338                    
+Conv_145                                           BPU  id(0)     HzSQuantizedConv           0.996659           3.131363                    
+Conv_147                                           BPU  id(0)     HzSQuantizedConv           0.999998           6.175111                    
+Concat_148                                         CPU  --        Concat                     0.999225           --                          
+Conv_149                                           BPU  id(0)     HzSQuantizedConv           0.998347           5.150071                    
+Conv_151                                           BPU  id(0)     HzSQuantizedConv           0.999049           4.891922                    
+Conv_153                                           BPU  id(0)     HzSQuantizedConv           0.999117           9.179299                    
+Conv_154                                           BPU  id(0)     HzSQuantizedConv           0.997745           5.150071                    
+Conv_156                                           BPU  id(0)     HzSQuantizedConv           0.999530           3.291553                    
+Conv_158                                           BPU  id(0)     HzSQuantizedConv           0.999999           9.961105                    
+Concat_159                                         CPU  --        Concat                     0.999622           --                          
+Reshape_162                                        CPU  --        Reshape                    0.999502           --                          
+Reshape_165                                        CPU  --        Reshape                    0.999225           --                          
+Reshape_168                                        CPU  --        Reshape                    0.999622           --                          
+Concat_169                                         CPU  --        Concat                     0.999461           --                          
+Split_170                                          CPU  --        Split                      0.997320           --                          
+Reshape_180                                        CPU  --        Reshape                    0.997320           --                          
+Transpose_181                                      CPU  --        Transpose                  0.997309           --                          
+Softmax_182                                        CPU  --        Softmax                    0.993375           --                          
+Conv_184                                           BPU  id(1)     HzSQuantizedConv           0.997692           0.855605                    
+Reshape_188                                        CPU  --        Reshape                    0.997692           --                          
+Sigmoid_189                                        CPU  --        Sigmoid                    0.999347           --                          
+Concat_190                                         CPU  --        Concat                     0.997692           --
+2023-05-18 17:45:23,174 file: build.py func: build line No: 621 The quantify model output:
+=============================================================================
+Node        Cosine Similarity  L1 Distance  L2 Distance  Chebyshev Distance  
+-----------------------------------------------------------------------------
+Concat_190  0.997692           0.034902     0.000349     5.533767
+2023-05-18 17:45:23,174 file: build.py func: build line No: 39 [Thu May 18 17:45:23 2023] End to Horizon NN Model Convert.
+2023-05-18 17:45:23,213 file: hb_mapper_makertbin.py func: hb_mapper_makertbin line No: 641 start convert to *.bin file....
+2023-05-18 17:45:23,242 file: onnx2horizonrt.py func: onnx2horizonrt line No: 2841 ONNX model output num : 1
+2023-05-18 17:45:23,243 file: onnx2horizonrt.py func: onnx2horizonrt line No: 2717 ############# model deps info #############
+2023-05-18 17:45:23,243 file: onnx2horizonrt.py func: onnx2horizonrt line No: 2719 hb_mapper version   : 1.6.8a
+2023-05-18 17:45:23,243 file: onnx2horizonrt.py func: onnx2horizonrt line No: 2722 hbdk version        : 3.27.4
+2023-05-18 17:45:23,243 file: onnx2horizonrt.py func: onnx2horizonrt line No: 2724 hbdk runtime version: 3.13.27
+2023-05-18 17:45:23,243 file: onnx2horizonrt.py func: onnx2horizonrt line No: 2727 horizon_nn version  : 0.13.3
+2023-05-18 17:45:23,244 file: onnx2horizonrt.py func: onnx2horizonrt line No: 2730 ############# model_parameters info #############
+2023-05-18 17:45:23,244 file: onnx2horizonrt.py func: onnx2horizonrt line No: 2736 onnx_model          : /convert_model/horizon_model_convert_sample/04_detection/03_yolov8_concat/mapper/model/yolov8n_relu_20class_zq.onnx
+2023-05-18 17:45:23,244 file: onnx2horizonrt.py func: onnx2horizonrt line No: 2737 BPU march           : bernoulli2
+2023-05-18 17:45:23,244 file: onnx2horizonrt.py func: onnx2horizonrt line No: 2738 layer_out_dump      : False
+2023-05-18 17:45:23,244 file: onnx2horizonrt.py func: onnx2horizonrt line No: 2739 log_level           : DEBUG
+2023-05-18 17:45:23,244 file: onnx2horizonrt.py func: onnx2horizonrt line No: 2740 working dir         : /convert_model/horizon_model_convert_sample/04_detection/03_yolov8_concat/mapper/model_output
+2023-05-18 17:45:23,244 file: onnx2horizonrt.py func: onnx2horizonrt line No: 2741 output_model_file_prefix: yolov8
+2023-05-18 17:45:23,244 file: onnx2horizonrt.py func: onnx2horizonrt line No: 2748 ############# input_parameters info #############
+2023-05-18 17:45:23,244 file: onnx2horizonrt.py func: onnx2horizonrt line No: 2765 ------------------------------------------
+2023-05-18 17:45:23,244 file: onnx2horizonrt.py func: onnx2horizonrt line No: 2767 ---------input info : images ---------
+2023-05-18 17:45:23,245 file: onnx2horizonrt.py func: onnx2horizonrt line No: 2768 input_name          : images
+2023-05-18 17:45:23,245 file: onnx2horizonrt.py func: onnx2horizonrt line No: 2769 input_type_rt       : rgb
+2023-05-18 17:45:23,245 file: onnx2horizonrt.py func: onnx2horizonrt line No: 2772 input_space&range   : regular
+2023-05-18 17:45:23,245 file: onnx2horizonrt.py func: onnx2horizonrt line No: 2773 input_layout_rt     : NCHW
+2023-05-18 17:45:23,245 file: onnx2horizonrt.py func: onnx2horizonrt line No: 2774 input_type_train    : rgb
+2023-05-18 17:45:23,245 file: onnx2horizonrt.py func: onnx2horizonrt line No: 2775 input_layout_train  : NCHW
+2023-05-18 17:45:23,245 file: onnx2horizonrt.py func: onnx2horizonrt line No: 2776 norm_type           : data_scale
+2023-05-18 17:45:23,245 file: onnx2horizonrt.py func: onnx2horizonrt line No: 2777 input_shape         : 1x3x640x640
+2023-05-18 17:45:23,245 file: onnx2horizonrt.py func: onnx2horizonrt line No: 2783 scale_value         : 0.003921568627451,
+2023-05-18 17:45:23,245 file: onnx2horizonrt.py func: onnx2horizonrt line No: 2785 cal_data_dir        : /convert_model/horizon_model_convert_sample/04_detection/03_yolov8_concat/mapper/cal_data
+2023-05-18 17:45:23,245 file: onnx2horizonrt.py func: onnx2horizonrt line No: 2786 ---------input info : images end -------
+2023-05-18 17:45:23,245 file: onnx2horizonrt.py func: onnx2horizonrt line No: 2787 ------------------------------------------
+2023-05-18 17:45:23,246 file: onnx2horizonrt.py func: onnx2horizonrt line No: 2789 ############# calibration_parameters info #############
+2023-05-18 17:45:23,246 file: onnx2horizonrt.py func: onnx2horizonrt line No: 2790 preprocess_on       : True
+2023-05-18 17:45:23,246 file: onnx2horizonrt.py func: onnx2horizonrt line No: 2791 calibration_type:   : default
+2023-05-18 17:45:23,246 file: onnx2horizonrt.py func: onnx2horizonrt line No: 2815 ############# compiler_parameters info #############
+2023-05-18 17:45:23,246 file: onnx2horizonrt.py func: onnx2horizonrt line No: 2819 hbdk_pass_through_params: --fast --O3
+2023-05-18 17:45:23,246 file: onnx2horizonrt.py func: onnx2horizonrt line No: 2819 input-source        : {'images': 'ddr', '_default_value': 'ddr'}
+2023-05-18 17:45:23,249 file: layout_util.py func: layout_util line No: 13 set_featuremap_layout start
+2023-05-18 17:45:23,251 file: hb_mapper_makertbin.py func: hb_mapper_makertbin line No: 768 Convert to runtime bin file sucessfully!
+2023-05-18 17:45:23,251 file: hb_mapper_makertbin.py func: hb_mapper_makertbin line No: 769 End Model Convert
