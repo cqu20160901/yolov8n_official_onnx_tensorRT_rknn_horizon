@@ -21,7 +21,7 @@ y = torch.cat((self.dfl(box), cls.sigmoid()), 1)       # 导出本示例中的on
 # 导出 onnx
 from ultralytics import YOLO
 
-model = YOLO('../weights/yolov8n_relu_20class.pt')
+model = YOLO('./weights/yolov8n_relu_20class.pt')
 success = model.export(format="onnx")
 ```
 
