@@ -12,9 +12,8 @@ yolov8_onnx_offical：使用官方提供的导出onnx方式导出的onnx模型�
 导出onxx修改：../ultralytics/nn/modules/head.pyhead.py 文件修改如下一行
 
 ```
--- # y = torch.cat((dbox, cls.sigmoid()), 1)              # 官方代码
-
--- y = torch.cat((self.dfl(box), cls.sigmoid()), 1)       # 导出本示例中的onnx修改行
+# y = torch.cat((dbox, cls.sigmoid()), 1)              # 官方代码
+y = torch.cat((self.dfl(box), cls.sigmoid()), 1)       # 导出本示例中的onnx修改行
 ```
 
 导出onn方式
