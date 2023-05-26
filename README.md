@@ -9,7 +9,7 @@ yolov8_onnx_offical：使用官方提供的导出onnx方式导出的onnx模型�
 
 以下是修改了导出onnx的方式导出的onnx 进行的转换其他模型测试
 
-导出onxx修改：../ultralytics/nn/modules/head.pyhead.py 文件修改如下一行
+导出onxx修改：../ultralytics/nn/modules/head.py 文件修改如下一行
 
 ```
 # y = torch.cat((dbox, cls.sigmoid()), 1)              # 官方代码
